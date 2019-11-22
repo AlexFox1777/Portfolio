@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {MuiThemeProvider, createMuiTheme} from "@material-ui/core";
+import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
     palette: {
         primary:{
             main: "#f2f5fe",
@@ -18,10 +18,12 @@ const theme = createMuiTheme({
     }
 });
 
+theme = responsiveFontSizes(theme);
+
 ReactDOM.render(
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
         <App/>
-    </MuiThemeProvider>
+    </ThemeProvider>
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
