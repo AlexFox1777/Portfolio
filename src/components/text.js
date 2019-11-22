@@ -1,0 +1,1 @@
+export const about = "Highly motivated full stack web developer with previous hands-on internships. Proficient in problem solving and customer satisfaction. Oriented for teamwork, personal growth and company growth.";
