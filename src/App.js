@@ -9,6 +9,7 @@ import Skills from "./components/skills/Skills";
 const useStyles = makeStyles({
     container: {
         paddingLeft: "100px",
+        minWidth: "400px",
     }
 });
 

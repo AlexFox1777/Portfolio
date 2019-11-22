@@ -5,10 +5,13 @@
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "@material-ui/icons": "^4.5.1",
+    "gsap": "^3.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-lottie": "^1.2.3",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-scrollmagic": "^2.1.1",
+    "scrollmagic": "^2.0.7"
   },
   "scripts": {
     "start": "react-scripts start",

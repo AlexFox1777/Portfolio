@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 //animation
 import Lottie from 'react-lottie'
 import programmer from './chibik-thinker'
@@ -8,10 +8,20 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import {about} from "../text";
 import Box from "@material-ui/core/Box";
+import {Controller, Scene} from "scrollmagic";
 
 const useStyles = makeStyles({
     about: {
         padding: "5% 5% 3% 5%"
+    },
+    hide: {
+        opacity: 0,
+        transition: 'all 1s ease-in-out',
+        transform: "translateX(-50px)"
+    },
+    show: {
+        opacity: 1,
+        transform: "translateX(0px)"
     },
     name: {
         padding: "0 0 5% 0",
@@ -38,6 +48,23 @@ const useStyles = makeStyles({
 export default function About() {
     const classes = useStyles();
     const [speed, setSpeed] = useState(1);
+    let title = useRef(null);
+    const controller = new Controller();
+
+    useEffect(() => {
+            new Scene({
+                triggerElement: title,
+                triggerHook: 0.9, // show, when scrolled 10% into view
+                // duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)
+                offset: 20, // move trigger to center of element
+                reverse: false,
+            })
+                .setClassToggle(title, classes.show) // add class to reveal
+                .addIndicators()
+                .addTo(controller); // assign the scene to the controller
+        }
+        , []);
+
     useEffect(() => {
         setSpeed(1.5)
     }, []);
@@ -56,11 +83,14 @@ export default function About() {
             <div className={classes.about}>
                 <Grid container>
                     <Grid xs={12} sm={12} md={7} item className={classes.containerItem}>
-                        <div className={classes.name}>
-                            <Typography color={"secondary"} variant={"h2"}>Hi!</Typography>
-                            <Typography color={"secondary"} variant={"h2"} className={classes.hello}>I`m Aleksandra</Typography>
+                        <div className={classes.hide} ref={el => title = el}>
+                            <div className={classes.name}>
+                                <Typography color={"secondary"} variant={"h2"}>Hi!</Typography>
+                                <Typography color={"secondary"} variant={"h2"} className={classes.hello}>I`m
+                                    Aleksandra</Typography>
+                            </div>
+                            <Typography color={"secondary"} className={classes.overview}>{about}</Typography>
                         </div>
-                        <Typography color={"secondary"} className={classes.overview}>{about}</Typography>
                     </Grid>
                     <Grid xs={12} sm={12} md={5} item className={classes.containerItem}>
                         <div className={classes.animation}>
