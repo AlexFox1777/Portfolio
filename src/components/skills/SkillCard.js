@@ -9,6 +9,7 @@ import Progress from "./Progress";
 
 const useStyles = makeStyles({
     flipCard: {
+        position: "static",
         margin: "auto",
         marginBottom: "40px",
         perspective: "1000px",

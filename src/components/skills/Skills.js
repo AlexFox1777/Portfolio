@@ -20,7 +20,8 @@ import SkillCard from "./SkillCard";
 const useStyles = makeStyles({
     background: {
         background: 'linear-gradient(45deg, #fa96ab 30%, #ffccb2 90%)',
-        height: "250px",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "auto 250px",
         width: "100%",
     },
     cards: {

@@ -6,6 +6,7 @@ import {otherSkills} from "../text";
 
 const useStyles = makeStyles({
     root: {
+        marginBottom: 100,
         display: 'flex',
         justifyContent: 'center',
         margin: "auto",
