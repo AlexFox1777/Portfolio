@@ -21,3 +21,4 @@ export const otherSkills = [
     "Information technology",
     "System analysis",
 ];
+

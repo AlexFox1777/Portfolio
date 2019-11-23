@@ -17,7 +17,6 @@ import Grid from "@material-ui/core/Grid";
 import SkillCard from "./SkillCard";
 
 
-
 const useStyles = makeStyles({
     background: {
         background: 'linear-gradient(45deg, #fa96ab 30%, #ffccb2 90%)',
@@ -72,20 +71,20 @@ export default function Skills() {
             <div>
                 <Grid container spacing={1} className={classes.cards} justify={"center"}
                       ref={el => cardItem = el}>
-                    <Grid item xs={12} sm={6} md={4} lg={2}>
-                        <SkillCard img={JS} title={"JavaScript"}/>
+                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                        <SkillCard img={JS} title={"JavaScript"} num1={"90%"} num2={"85%"} num3={"80%"}/>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={2}>
-                        <SkillCard img={REACT} title={"React"}/>
+                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                        <SkillCard img={REACT} title={"React"} num1={"90%"} num2={"90%"} num3={"90%"}/>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={2}>
-                        <SkillCard img={REDUX} title={"Redux"}/>
+                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                        <SkillCard img={REDUX} title={"Redux"} num1={"85%"} num2={"80%"} num3={"85%"}/>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={2}>
-                        <SkillCard img={NODE} title={"Node.js"}/>
+                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                        <SkillCard img={NODE} title={"Node.js"} num1={"93%"} num2={"80%"} num3={"85%"}/>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={2}>
-                        <SkillCard img={SQL} title={"MySql"}/>
+                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                        <SkillCard img={SQL} title={"MySql"} num1={"80%"} num2={"80%"} num3={"80%"}/>
                     </Grid>
                 </Grid>
             </div>
