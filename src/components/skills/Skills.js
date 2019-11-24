@@ -67,7 +67,7 @@ export default function Skills() {
         , []);
 
     return (
-        <div className={classes.background}>
+        <div className={classes.background} id={"skills"}>
             <Typography color={"secondary"} variant={"h4"} className={classes.title}>My Skills</Typography>
             <div>
                 <Grid container spacing={1} className={classes.cards} justify={"center"}
