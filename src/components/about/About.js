@@ -80,7 +80,7 @@ export default function About() {
 
     return (
         <>
-            <div className={classes.about}>
+            <div className={classes.about} id={"about"}>
                 <Grid container>
                     <Grid xs={12} sm={12} md={7} item className={classes.containerItem}>
                         <div className={classes.hide} ref={el => title = el}>
