@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import Pic from './Group.svg'
 //material
 import makeStyles from '@material-ui/core/styles/makeStyles'
@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Box from "@material-ui/core/Box";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import {Controller, Scene} from "scrollmagic";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -34,10 +35,17 @@ const useStyles = makeStyles(theme => ({
     },
     imgContainer:{
         display: "flex",
+        opacity: 0,
+        transform: "translateY(50px)",
+        transition: 'all 1s ease-in-out',
         justifyContent: "center",
         [theme.breakpoints.down('sm')]: {
             display: "none"
         },
+    },
+    visible: {
+        opacity: 1,
+        transform: "translateY(0px)"
     }
 }));
 
@@ -45,9 +53,28 @@ export default function Education() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState('panel1');
 
+    const controller = new Controller();
+    let image = useRef(null);
+
     const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
+
+
+    useEffect(() => {
+            new Scene({
+                triggerElement: image,
+                triggerHook: 0.9, // show, when scrolled 10% into view
+                // duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)
+                offset: 20, // move trigger to center of element
+                reverse: false,
+            })
+                .setClassToggle(image, classes.visible) // add class to reveal
+                .addIndicators()
+                .addTo(controller); // assign the scene to the controller
+        }
+        , []);
+
     return (
         <Paper elevation={0} square={true} className={classes.root} id={"education"}>
             <Typography variant={"h4"} color={"secondary"} className={classes.title}>
@@ -118,7 +145,7 @@ export default function Education() {
                 </ExpansionPanel>
             </div>
 
-            <div className={classes.imgContainer}>
+            <div className={classes.imgContainer} ref={el => image = el}>
                 <img src={Pic} width={600}/>
             </div>
 
