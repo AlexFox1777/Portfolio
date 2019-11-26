@@ -10,15 +10,19 @@ import Projects from "./components/projects/Projects";
 import Contacts from "./components/contact/Contacts";
 import Footer from "./components/footer/Footer";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme =>({
     container: {
         padding: "0 0 0 100px",
         boxSizing: "border-box",
         minWidth: "400px",
-        width: "100%"
+        width: "100%",
+        overflowX: "hidden",
+        [theme.breakpoints.down('xs')]: {
+            padding: "0 0 0 80px",
+        },
     },
 
-});
+}));
 
 
 function App() {

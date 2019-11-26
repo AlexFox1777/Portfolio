@@ -7,7 +7,7 @@ import Phone from "@material-ui/icons/Phone";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Paper from "@material-ui/core/Paper";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     links: {
         background: "#f2f5fe",
         height: "100%",
@@ -17,6 +17,9 @@ const useStyles = makeStyles({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        [theme.breakpoints.down('xs')]: {
+            width: "80px",
+        },
     },
     link: {
         fontSize: "1rem",
@@ -31,7 +34,7 @@ const useStyles = makeStyles({
         height: "2.3rem",
         width: "2.3rem"
     }
-});
+}));
 
 function NavBar() {
     const classes = useStyles();
