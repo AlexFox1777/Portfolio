@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         justifyContent: "center",
         alignItems: "center",
         [theme.breakpoints.down('xs')]: {
-            width: "80px",
+            width: "70px",
         },
     },
     link: {
