@@ -13,7 +13,8 @@ import foodieForm from './resources/form.png'
 const useStyles = makeStyles({
     root: {},
     title: {
-        padding: "130px 0 90px 2%"
+        padding: "130px 0 90px 2%",
+        boxSizing: "border-box",
     },
 });
 

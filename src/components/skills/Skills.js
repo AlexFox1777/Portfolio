@@ -44,15 +44,6 @@ export default function Skills() {
     const controller = new Controller();
 
     useEffect(() => {
-            /*  let tween = TweenMax.to(
-                  cardItem,
-                  .8,
-                  {
-                      // opacity: 1,
-                       y: -20,
-                       ease: Power3.easeOut
-                  }
-              );*/
             new Scene({
                 triggerElement: cardItem,
                 triggerHook: 0.9, // show, when scrolled 10% into view

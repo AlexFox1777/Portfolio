@@ -36,7 +36,7 @@ const useStyles = makeStyles({
 function NavBar() {
     const classes = useStyles();
     return (
-        <>
+        <div>
             <Paper elevation={0} square={true} className={classes.links}>
                 <a className={classes.link} href="#about">
                     <Face className={classes.icon}/>
@@ -61,7 +61,7 @@ function NavBar() {
                     <p>Contacts</p>
                 </a>
             </Paper>
-        </>
+        </div>
     )
 }
 

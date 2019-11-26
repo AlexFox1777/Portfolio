@@ -8,11 +8,14 @@ import Skills from "./components/skills/Skills";
 import Education from "./components/education/Education";
 import Projects from "./components/projects/Projects";
 import Contacts from "./components/contact/Contacts";
+import Footer from "./components/footer/Footer";
 
 const useStyles = makeStyles({
     container: {
-        paddingLeft: "100px",
+        padding: "0 0 0 100px",
+        boxSizing: "border-box",
         minWidth: "400px",
+        width: "100%"
     },
 
 });
@@ -29,6 +32,7 @@ function App() {
                 <Education/>
                 <Projects/>
                 <Contacts/>
+                <Footer/>
             </div>
         </div>
     );
