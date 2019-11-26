@@ -9,19 +9,22 @@ const useStyles = makeStyle({
     root: props => ({
         background: props.bg ? props.bg : "linear-gradient(45deg, #ffff7370 30%, #ff615154 90%)",
         paddingTop: "100px",
-        paddingBottom: "100px"
+        paddingBottom: "100px",
+        width: "100%",
     }),
     picContainer: {
         position: "relative",
         opacity: 0,
-        transition: 'all 1s ease-in-out',
-        transform: "translateX(-100px)",
+        transition: 'all 0.6s ease-in-out',
+        transform: "translateX(-40px)",
+        boxSizing: "border-box",
     },
     picContainer1: {
         position: "relative",
         opacity: 0,
-        transition: 'all 1s ease-in-out',
-        transform: "translateX(100px)",
+        transition: 'all 0.6s ease-in-out',
+        transform: "translateX(40px)",
+        boxSizing: "border-box",
     },
     pic: props => ({
         position: "absolute",
@@ -44,15 +47,15 @@ const useStyles = makeStyle({
     },
     textContainer: {
         opacity: 0,
-        transition: 'all 1s ease-in-out',
-        transform: "translateX(100px)",
+        transition: 'all 0.6s ease-in-out',
+        transform: "translateX(40px)",
         paddingLeft: "5%",
         paddingRight: "5%",
     },
     textContainer1: {
         opacity: 0,
-        transition: 'all 1s ease-in-out',
-        transform: "translateX(-100px)",
+        transition: 'all 0.6s ease-in-out',
+        transform: "translateX(-40px)",
         paddingLeft: "5%",
         paddingRight: "5%",
     },
@@ -114,7 +117,7 @@ export default function Project(props) {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
+            <Grid container spacing={0}>
                 <Grid item sm={0} md={6} className={classes.gridItem1}>
                     <div className={props.order ? classes.picContainer : classes.picContainer1}
                          ref={el => column1 = el}>
