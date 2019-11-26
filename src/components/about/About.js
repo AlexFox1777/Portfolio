@@ -8,7 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import {about} from "../text";
 import Box from "@material-ui/core/Box";
-import {Controller, Scene} from "scrollmagic";
+import ScrollMagic from 'scrollmagic';
 
 const useStyles = makeStyles({
     about: {
@@ -49,10 +49,10 @@ export default function About() {
     const classes = useStyles();
     const [speed, setSpeed] = useState(1);
     let title = useRef(null);
-    const controller = new Controller();
+    const controller = new ScrollMagic.Controller();
 
     useEffect(() => {
-            new Scene({
+            new ScrollMagic.Scene({
                 triggerElement: title,
                 triggerHook: 0.9, // show, when scrolled 10% into view
                 // duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)

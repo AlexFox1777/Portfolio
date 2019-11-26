@@ -23,6 +23,8 @@ const useStyles = makeStyles({
         backgroundRepeat: "no-repeat",
         backgroundSize: "auto 250px",
         width: "100%",
+        minWidth: "300px"
+
     },
     cards: {
         paddingTop: "10px",

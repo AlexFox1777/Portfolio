@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme =>({
         width: "100%",
         overflowX: "hidden",
         [theme.breakpoints.down('xs')]: {
-            padding: "0 0 0 80px",
+            padding: "0 0 0 70px",
         },
     },
 
