@@ -1,14 +1,17 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+//material-ui
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import Typography from "@material-ui/core/Typography"
+import Box from "@material-ui/core/Box"
+import Snackbar from '@material-ui/core/Snackbar'
 //form
 import * as Yup from 'yup'
-import {Field, Form, withFormik} from "formik";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import {Field, Form, withFormik} from "formik"
+import axios from 'axios'
 
 const useStyles = makeStyles({
     title: {
-        padding: "80px 0 60px 2%"
+        padding: "80px 0 60px 2%",
     },
     form: {
         display: "flex",
@@ -56,6 +59,19 @@ const useStyles = makeStyles({
             border: "1.5px solid #2E69FF",
         }
     },
+    snackbar: {
+        background: 'rgb(187,255,162)',
+        height: '35px',
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "4px",
+        padding: "0 10px 5px 10px",
+        marginLeft: 125,
+    },
+    snackbarError: {
+        background: 'rgb(255,164,133)',
+    }
 
 });
 
@@ -71,8 +87,51 @@ function ContactForm(props) {
         if (props.touched[name] && props.errors[name]) return `${classes.errorLabel}`
     };
 
+    useEffect(() => {
+        if (props.status) {
+            if (props.status.success || props.status.error) {
+                setState({...state, open: true});
+                setTimeout(() => {
+                    handleClose()
+                }, 2000)
+            }
+        }
+
+    }, [props.isSubmitting, props.status]);
+
+    const [state, setState] = useState({
+        open: false,
+        vertical: 'top',
+        horizontal: 'center',
+    });
+
+    const {vertical, horizontal, open} = state;
+
+    const handleClose = () => {
+        setState({...state, open: false});
+    };
+
     return (
         <div>
+            <Snackbar
+                anchorOrigin={{vertical, horizontal}}
+                key={`${vertical},${horizontal}`}
+                open={open}
+                onClose={handleClose}
+                ContentProps={{
+                    'aria-describedby': 'message-id',
+                }}
+                message={<span id="message-id">I love snacks</span>}
+            >
+                <div
+                    className={`${classes.snackbar} + ${(props.status && props.status.error) ? `${classes.snackbarError}` : ''}`}>
+                    <Typography color={"secondary"}>
+                        {props.status && props.status.success && "The email was sent"}
+                        {props.status && props.status.error && "Error"}
+                    </Typography>
+                </div>
+            </Snackbar>
+
             <Typography variant={"h4"} color={"secondary"} className={classes.title}><Box textAlign={"center"}>Contact
                 me</Box></Typography>
             <Form className={classes.form}>
@@ -112,15 +171,27 @@ const FormikContactForm = withFormik({
     },
 
     validationSchema: Yup.object().shape({
-        name: Yup.string().max(50).required('Please type a name'),
-        company: Yup.string().max(70),
-        phone: Yup.string().max(11).required('Please type a phone number'),
-        email: Yup.string().max(30).required('Please type an email'),
-        message: Yup.string().max(300).required('Please type in a message')
+         name: Yup.string().max(50).required('Please type a name'),
+         company: Yup.string().max(70),
+         phone: Yup.string().max(11).required('Please type a phone number'),
+         email: Yup.string().max(30).required('Please type an email'),
+         message: Yup.string().max(300).required('Please type in a message')
     }),
 
-    handleSubmit(values, {props}) {
-        console.log("values", values)
+    handleSubmit(values, {setStatus, setSubmitting}) {
+
+        axios.post('https://portfolio-aleksandra-foksman.herokuapp.com/email/send', {message: values})
+            .then(res => {
+                setStatus({
+                    success: true,
+                });
+            })
+            .catch(err => {
+                setStatus({
+                    error: true,
+                });
+            });
+        setSubmitting(false);
     }
 
 })(ContactForm);

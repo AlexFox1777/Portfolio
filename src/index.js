@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 
 let theme = createMuiTheme({
@@ -22,6 +23,7 @@ theme = responsiveFontSizes(theme);
 
 ReactDOM.render(
     <ThemeProvider theme={theme}>
+        <CssBaseline />
         <App/>
     </ThemeProvider>
     , document.getElementById('root'));

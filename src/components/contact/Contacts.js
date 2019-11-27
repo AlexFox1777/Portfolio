@@ -6,7 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import Instagram from './resources/instagram.svg'
 import Tweeter from './resources/tweeter.svg'
 import LinkedIn from './resources/linkedin.svg'
-import Gmail from './resources/gmail.svg'
 import {Controller, Scene} from "scrollmagic";
 import FormikContactForm from "./ContactForm";
 
@@ -67,7 +66,6 @@ export default function Contacts() {
                     <a href={"https://twitter.com/foksman"}>
                         <img src={Tweeter} width={50} className={classes.img}/>
                     </a>
-                    <a href={""}><img src={Gmail} width={50} className={classes.img}/></a>
                 </div>
             </div>
         </>
