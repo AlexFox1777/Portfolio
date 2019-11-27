@@ -10,6 +10,9 @@ import {Field, Form, withFormik} from "formik"
 import axios from 'axios'
 
 const useStyles = makeStyles({
+    root: {
+        position: "relative"
+    },
     title: {
         padding: "80px 0 60px 2%",
     },
@@ -111,7 +114,7 @@ function ContactForm(props) {
     };
 
     return (
-        <div>
+        <div className={classes.root}>
             <Snackbar
                 anchorOrigin={{vertical, horizontal}}
                 key={`${vertical},${horizontal}`}
@@ -170,15 +173,17 @@ const FormikContactForm = withFormik({
     },
 
     validationSchema: Yup.object().shape({
-         name: Yup.string().max(50).required('Please type a name'),
-         company: Yup.string().max(70),
-         phone: Yup.string().max(11).required('Please type a phone number'),
-         email: Yup.string().max(30).required('Please type an email'),
-         message: Yup.string().max(300).required('Please type in a message')
+        name: Yup.string().max(50).required('Please type a name'),
+        company: Yup.string().max(70),
+        phone: Yup.string().max(11).required('Please type a phone number'),
+        email: Yup.string().max(30).required('Please type an email'),
+        message: Yup.string().max(300).required('Please type in a message')
     }),
 
     handleSubmit(values, {setStatus, setSubmitting}) {
-
+        setStatus({
+            success: true,
+        });
         axios.post('https://portfolio-aleksandra-foksman.herokuapp.com/email/send', {message: values})
             .then(res => {
                 setStatus({

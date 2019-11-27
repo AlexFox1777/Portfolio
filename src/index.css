@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+html { overflow-x: hidden; }
+body { overflow-x: hidden; }
+
 *{
   padding: 0;
   margin: 0;
