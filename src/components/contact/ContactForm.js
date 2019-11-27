@@ -67,7 +67,6 @@ const useStyles = makeStyles({
         justifyContent: "center",
         borderRadius: "4px",
         padding: "0 10px 5px 10px",
-        marginLeft: 125,
     },
     snackbarError: {
         background: 'rgb(255,164,133)',
