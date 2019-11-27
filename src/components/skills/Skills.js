@@ -17,14 +17,15 @@ import Grid from "@material-ui/core/Grid";
 import SkillCard from "./SkillCard";
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme =>({
     background: {
         background: 'linear-gradient(45deg, #fa96ab 30%, #ffccb2 90%)',
         backgroundRepeat: "no-repeat",
         backgroundSize: "auto 250px",
         width: "100%",
-        minWidth: "300px"
-
+        [theme.breakpoints.down('xs')]: {
+            background: 'white',
+        },
     },
     cards: {
         paddingTop: "10px",
@@ -38,7 +39,7 @@ const useStyles = makeStyles({
         opacity: 1,
         transform: "translateY(-50px)"
     }
-});
+}));
 
 export default function Skills() {
     const classes = useStyles();
