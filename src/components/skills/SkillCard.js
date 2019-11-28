@@ -18,7 +18,7 @@ const useStyles = makeStyles({
         maxWidth: "230px",
         height: "200px",
         "&:hover": {
-            "& .makeStyles-flipCardInner-187": {
+            "& $flipCardInner": {
                 transform: "rotateY(180deg)",
             }
         }
