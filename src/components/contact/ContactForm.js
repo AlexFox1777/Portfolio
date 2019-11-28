@@ -9,12 +9,16 @@ import * as Yup from 'yup'
 import {Field, Form, withFormik} from "formik"
 import axios from 'axios'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     root: {
         position: "relative"
     },
     title: {
         padding: "80px 0 60px 2%",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: "24px",
+            fontWeight: "bold",
+        },
     },
     form: {
         display: "flex",
@@ -75,7 +79,7 @@ const useStyles = makeStyles({
         background: 'rgb(255,164,133)',
     }
 
-});
+}));
 
 
 function ContactForm(props) {

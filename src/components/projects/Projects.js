@@ -10,13 +10,17 @@ import dashboard from './resources/mother-dashboard.png'
 import foodieProfile from './resources/dashboard.png'
 import foodieForm from './resources/form.png'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     root: {},
     title: {
         padding: "130px 0 90px 2%",
         boxSizing: "border-box",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: "24px",
+            fontWeight: "bold",
+        },
     },
-});
+}));
 
 export default function Projects() {
     const classes = useStyles();

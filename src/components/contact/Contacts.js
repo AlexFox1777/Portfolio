@@ -20,7 +20,7 @@ const useStyles = makeStyle({
         transform: "translateY(50px)"
     },
     title: {
-        padding: "10px 0 10px 0"
+        padding: "10px 0 10px 0",
     },
     img: {
         margin: "0 1% 0 1%",
