@@ -84,7 +84,7 @@ const useStyles = makeStyle({
 });
 
 export default function Project(props) {
-    const {title, img, img2, text, git, video} = props;
+    const {title, img, img2, text, git, video, website} = props;
     const classes = useStyles(props);
     let column1 = useRef(null);
     let column2 = useRef(null);
@@ -130,14 +130,20 @@ export default function Project(props) {
                     </div>
                 </Grid>
                 <Grid item sm={12} md={6} className={`${classes.textSection} ${classes.gridItem2}`}>
-                    <div className={props.order ? classes.textContainer : classes.textContainer1} ref={el => column2 = el}>
+                    <div className={props.order ? classes.textContainer : classes.textContainer1}
+                         ref={el => column2 = el}>
                         <Typography variant={"h5"} color={"secondary"} className={classes.title}><Box
                             textAlign="center">{title}</Box></Typography>
                         <Typography color={"secondary"}> <Box textAlign="center">{text}</Box></Typography>
                         <Typography color={"secondary"}>
                             <Box textAlign="center" className={classes.links}>
                                 <a href={git} className={classes.link}> github repo </a>
-                                <a href={video} className={classes.link}> demo video </a>
+                                {website && (
+                                    <a href={website} className={classes.link}>website </a>
+                                )}
+                                {video && (
+                                    <a href={video} className={classes.link}> demo video </a>
+                                )}
                             </Box>
                         </Typography>
                     </div>

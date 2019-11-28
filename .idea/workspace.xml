@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fc0364a-303f-42e7-8a48-60a5c0984860" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/skills/SkillCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/skills/SkillCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/Project.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/skills/SkillCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+            <state relative-caret-position="124">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -51,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/projects/Project.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1688">
-              <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="52" selection-end-column="27" />
+            <state relative-caret-position="424">
+              <caret line="139" column="78" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -156,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/components/text.js" />
         <option value="$PROJECT_DIR$/src/components/contact/ContactTop.js" />
         <option value="$PROJECT_DIR$/src/components/footer/Footer.js" />
-        <option value="$PROJECT_DIR$/src/components/projects/Project.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/index.css" />
@@ -170,6 +170,7 @@
         <option value="$PROJECT_DIR$/src/components/about/About.js" />
         <option value="$PROJECT_DIR$/src/components/skills/Skills.js" />
         <option value="$PROJECT_DIR$/src/components/skills/SkillCard.js" />
+        <option value="$PROJECT_DIR$/src/components/projects/Project.js" />
       </list>
     </option>
   </component>
@@ -312,12 +313,12 @@
       <workItem from="1574570949735" duration="7082000" />
       <workItem from="1574718165973" duration="18881000" />
       <workItem from="1574816974403" duration="17953000" />
-      <workItem from="1574904578776" duration="8067000" />
+      <workItem from="1574904578776" duration="9014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149855000" />
+    <option name="totallyTimeSpent" value="150802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -522,13 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/projects/Project.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1688">
-          <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="52" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/skills/OtherSkills.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -546,16 +540,6 @@
           <folding>
             <element signature="e#207#269#0" expanded="true" />
             <element signature="e#1833#2369#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/projects/Projects.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -599,11 +583,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/skills/SkillCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="124">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/projects/Projects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/projects/Project.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="139" column="78" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="78" />
         </state>
       </provider>
     </entry>
