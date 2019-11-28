@@ -138,12 +138,10 @@ export default function Education() {
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography color={"secondary"}>
-                            Intership during education:
-                            Company: Safe mothers, safe Babies -
-                            Community-based model that ensures that mothers and childrens health in first 1,000 days of
-                            life.
-                            Role: Was assigned to the role of front end developer to build reliable admin system. Also
-                            was helping backend team to build endpoints to get requests from ODK mobile application.
+                            Intership during education: <br/>
+                            Organization: Safe Mothers, Safe Babies Non-profit organization that aims to reduce infant and pregnant mother mortality rates in the villages of rural Uganda. <br/>
+                            Project: Riders for LIfe, Administrative Utility SPA linked to a NodeJS back-end. This project also utilized Frontline SMS messaging service that connected to our Postgres database. <br/>
+                            Role: worked across the stack as a developer though the majority of my time was spent building the administrative facing SPA built using React.
                         </Typography>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
