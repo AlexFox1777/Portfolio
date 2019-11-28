@@ -12,6 +12,7 @@
     "react-dom": "^16.12.0",
     "react-lottie": "^1.2.3",
     "react-scripts": "3.2.0",
+    "react-scroll": "^1.7.14",
     "react-scrollmagic": "^2.1.1",
     "scrollmagic": "^2.0.7",
     "yup": "^0.27.0"

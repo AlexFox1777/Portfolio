@@ -76,7 +76,7 @@ export default function Education() {
         , []);
 
     return (
-        <Paper elevation={0} square={true} className={classes.root} id={"education"}>
+        <Paper elevation={0} square={true} className={classes.root} id="education">
             <Typography variant={"h4"} color={"secondary"} className={classes.title}>
                 <Box textAlign={"center"}>
                     My Education &

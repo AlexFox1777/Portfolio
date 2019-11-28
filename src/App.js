@@ -14,9 +14,8 @@ const useStyles = makeStyles(theme =>({
     container: {
         padding: "0 0 0 100px",
         boxSizing: "border-box",
-        minWidth: "300px",
+        minWidth: "250px",
         width: "100%",
-        position: 'relative',
         overflow: "hidden",
         [theme.breakpoints.down('xs')]: {
             padding: "0 0 0 70px",

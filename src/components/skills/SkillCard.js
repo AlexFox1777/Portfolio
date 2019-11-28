@@ -14,6 +14,8 @@ const useStyles = makeStyles({
         marginBottom: "40px",
         perspective: "1000px",
         width: "90%",
+        minWidth: "130px",
+        maxWidth: "230px",
         height: "200px",
         "&:hover": {
             "& .makeStyles-flipCardInner-187": {

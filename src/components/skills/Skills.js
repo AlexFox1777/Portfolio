@@ -61,24 +61,24 @@ export default function Skills() {
         , []);
 
     return (
-        <div className={classes.background} id={"skills"}>
+        <div className={classes.background} id="skills">
             <Typography color={"secondary"} variant={"h4"} className={classes.title}>My Skills</Typography>
             <div>
                 <Grid container spacing={1} className={classes.cards} justify={"center"}
                       ref={el => cardItem = el}>
-                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                    <Grid item xs={8} sm={4} md={3} lg={2}>
                         <SkillCard img={JS} title={"JavaScript"} num1={"90%"} num2={"85%"} num3={"80%"}/>
                     </Grid>
-                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                    <Grid item xs={8} sm={4} md={3} lg={2}>
                         <SkillCard img={REACT} title={"React"} num1={"90%"} num2={"90%"} num3={"90%"}/>
                     </Grid>
-                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                    <Grid item xs={8} sm={4} md={3} lg={2}>
                         <SkillCard img={REDUX} title={"Redux"} num1={"85%"} num2={"80%"} num3={"85%"}/>
                     </Grid>
-                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                    <Grid item xs={8} sm={4} md={3} lg={2}>
                         <SkillCard img={NODE} title={"Node.js"} num1={"93%"} num2={"80%"} num3={"85%"}/>
                     </Grid>
-                    <Grid item xs={6} sm={4} md={3} lg={2}>
+                    <Grid item xs={8} sm={4} md={3} lg={2}>
                         <SkillCard img={SQL} title={"MySql"} num1={"80%"} num2={"80%"} num3={"80%"}/>
                     </Grid>
                 </Grid>

@@ -53,9 +53,9 @@ export default function Contacts() {
         , []);
 
     return (
-        <>
+        <div id="contact" >
             <FormikContactForm/>
-            <div className={classes.root} id={"contact"} ref={el => pic1 = el}>
+            <div className={classes.root} ref={el => pic1 = el}>
                 <Typography color={"secondary"} className={classes.title}>Stay In Touch</Typography>
                 <div>
                     <a href={"https://www.instagram.com/sasha_foxman/"}>
@@ -68,6 +68,6 @@ export default function Contacts() {
                     </a>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
