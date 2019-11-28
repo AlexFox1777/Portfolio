@@ -30,10 +30,15 @@ const useStyles = makeStyles(theme => ({
         whiteSpace: "nowrap",
         [theme.breakpoints.down('xs')]: {
             fontSize: "24px",
+            fontWeight: "bold",
+            textAlign: "center"
         },
     },
     overview: {
         lineHeight: "1.6",
+        [theme.breakpoints.down('xs')]: {
+            textAlign: "center"
+        },
     },
     containerItem: {
         display: "flex",

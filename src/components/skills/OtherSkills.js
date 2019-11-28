@@ -4,7 +4,7 @@ import Chip from "@material-ui/core/Chip";
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import {otherSkills} from "../text";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     root: {
         marginBottom: 100,
         display: 'flex',
@@ -18,9 +18,13 @@ const useStyles = makeStyles({
     },
     title: {
         textAlign: "center",
-        padding: "4% 0 4% 2%"
+        padding: "4% 0 4% 2%",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: "24px",
+            fontWeight: "bold",
+        },
     }
-});
+}));
 
 export default function OtherSkills() {
     const classes = useStyles();

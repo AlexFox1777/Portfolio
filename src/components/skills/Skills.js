@@ -33,7 +33,12 @@ const useStyles = makeStyles(theme =>({
         transition: 'all 1s ease-in-out'
     },
     title: {
-        padding: "40px 0 50px 2%"
+        padding: "40px 0 50px 5%",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: "24px",
+            fontWeight: "bold",
+            textAlign: "center"
+        },
     },
     visible: {
         opacity: 1,

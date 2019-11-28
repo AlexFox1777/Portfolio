@@ -23,7 +23,11 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: "80px",
     },
     title: {
-        padding: "40px 0 90px 2%"
+        padding: "40px 0 90px 2%",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: "24px",
+            fontWeight: "bold",
+        },
     },
     heading: {
         flexBasis: '33.33%',
