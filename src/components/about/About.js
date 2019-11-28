@@ -10,9 +10,9 @@ import {about} from "../text";
 import Box from "@material-ui/core/Box";
 import ScrollMagic from 'scrollmagic';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     about: {
-        padding: "5% 5% 3% 5%"
+        padding: "5% 5% 3% 5%",
     },
     hide: {
         opacity: 0,
@@ -25,13 +25,14 @@ const useStyles = makeStyles({
     },
     name: {
         padding: "0 0 5% 0",
-        width: "75%",
     },
     hello: {
         whiteSpace: "nowrap",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: "24px",
+        },
     },
     overview: {
-        width: "75%",
         lineHeight: "1.6",
     },
     containerItem: {
@@ -43,7 +44,7 @@ const useStyles = makeStyles({
     animation: {
         width: "100%"
     }
-});
+}));
 
 export default function About() {
     const classes = useStyles();
@@ -80,14 +81,15 @@ export default function About() {
 
     return (
         <>
-            <div className={classes.about} id={"about"}>
+            <div className={classes.about} id="about">
                 <Grid container>
                     <Grid xs={12} sm={12} md={7} item className={classes.containerItem}>
                         <div className={classes.hide} ref={el => title = el}>
                             <div className={classes.name}>
-                                <Typography color={"secondary"} variant={"h2"}>Hi!</Typography>
-                                <Typography color={"secondary"} variant={"h2"} className={classes.hello}>I`m
-                                    Aleksandra</Typography>
+                                <Typography color={"secondary"} variant={"h2"}className={classes.hello}  component={"h2"}>Hi!</Typography>
+                                <Typography color={"secondary"} variant={"h2"} className={classes.hello}>
+                                    I`m Aleksandra
+                                </Typography>
                             </div>
                             <Typography color={"secondary"} className={classes.overview}>{about}</Typography>
                         </div>

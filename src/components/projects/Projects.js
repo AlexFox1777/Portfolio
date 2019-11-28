@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 export default function Projects() {
     const classes = useStyles();
     return (
-        <div className={classes.root} id={"projects"}>
+        <div className={classes.root} id="projects">
             <Typography variant={"h4"} color={"secondary"} className={classes.title}>
                 <Box textAlign={"center"}>
                     Projects

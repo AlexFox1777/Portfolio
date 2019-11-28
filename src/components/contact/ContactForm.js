@@ -20,9 +20,9 @@ const useStyles = makeStyles({
         display: "flex",
         flexDirection: "column",
         textAlign: "left",
-        width: "30%",
-        minWidth: 250,
-        maxWidth: 800,
+        width: "80%",
+        minWidth: 150,
+        maxWidth: 500,
         margin: 'auto'
     },
     field: {
