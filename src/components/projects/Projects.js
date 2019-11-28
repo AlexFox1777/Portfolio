@@ -45,7 +45,8 @@ export default function Projects() {
                      order={false}
                      bg={"linear-gradient(45deg, #a4ff73cf 30%, #23b8ff73 90%)"}
                      git={"https://github.com/build-week-foodie-fun/FE"}
-                     video={"https://www.youtube.com/watch?v=KM4jNYUOg7Y&amp=&feature=youtu.be"}
+                     website={"https://foodiefunapp.netlify.com"}
+
             />
         </div>
     )
