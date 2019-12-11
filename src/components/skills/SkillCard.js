@@ -64,6 +64,7 @@ const useStyles = makeStyles(theme => ({
         display:"flex",
         alignItems: "center",
         justifyContent: "center",
+        margin: "auto",
         "&:last-child":{
             padding: 0,
             width: "60%",

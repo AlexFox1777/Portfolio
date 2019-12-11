@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import Pic from './Group.svg'
+import Pic from './Degree.svg'
 //material
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Paper from "@material-ui/core/Paper";
