@@ -13,7 +13,7 @@ import foodieForm from './resources/form.png'
 const useStyles = makeStyles(theme => ({
     root: {},
     title: {
-        padding: "130px 0 90px 2%",
+        padding: "90px 0 90px 2%",
         boxSizing: "border-box",
         [theme.breakpoints.down('xs')]: {
             fontSize: "24px",
@@ -44,8 +44,8 @@ export default function Projects() {
                      img2={foodieProfile}
                      order={false}
                      bg={"linear-gradient(45deg, #a4ff73cf 30%, #23b8ff73 90%)"}
-                     git={"https://github.com/build-week-foodie-fun/FE"}
-                     website={"https://foodiefunapp.netlify.com"}
+                     git={"https://github.com/Foodie-Fan"}
+                     website={"https://foodie-fan.netlify.com/login"}
 
             />
         </div>

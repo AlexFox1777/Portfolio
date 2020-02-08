@@ -16,6 +16,8 @@ import {Controller, Scene} from "scrollmagic";
 const useStyles = makeStyles(theme => ({
     root: {
         // background: 'linear-gradient(45deg, #73b3ffcf 30%, #51ffef73 90%)',
+        paddingTop: 20,
+        paddingBottom: 40,
     },
     accordion: {
         width: '90%',
