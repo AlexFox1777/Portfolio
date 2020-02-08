@@ -18,8 +18,14 @@ const useStyles = makeStyles(theme =>({
         width: "100%",
         overflow: "hidden",
         [theme.breakpoints.down('xs')]: {
-            padding: "0 0 0 70px",
+            padding: 0,
+            paddingBottom: 65,
         },
+        left:{
+            [theme.breakpoints.down('xs')]:{
+                // display: 'none'
+            }
+        }
     },
 
 }));
@@ -29,7 +35,7 @@ function App() {
     const classes = useStyles();
     return (
         <div>
-            <NavBar/>
+            <NavBar className={classes.left}/>
             <div className={classes.container}>
                 <About/>
                 <Skills/>
@@ -37,6 +43,7 @@ function App() {
                 <Projects/>
                 <Contacts/>
                 <Footer/>
+
             </div>
         </div>
     );

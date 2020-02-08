@@ -10,6 +10,7 @@ import Paper from "@material-ui/core/Paper";
 const useStyles = makeStyles(theme => ({
     links: {
         background: "#f2f5fe",
+        borderRight: '2px solid #dbdfe7',
         height: "100%",
         width: "100px",
         position: "fixed",
@@ -18,7 +19,18 @@ const useStyles = makeStyles(theme => ({
         justifyContent: "center",
         alignItems: "center",
         [theme.breakpoints.down('xs')]: {
-            width: "80px",
+            width: "100%",
+            height: "65px",
+            display: "flex",
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            background: "#f2f5fe",
+            bottom: 0,
+            zIndex: 5,
+            padding: 8,
+            borderRight: 'none',
+            borderTop: '1.5px solid #dbdfe7',
+            minWidth: "250px",
         },
     },
     link: {
@@ -28,6 +40,14 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: "40%",
         "&:hover": {
             color: "#7c6f6f",
+        },
+        [theme.breakpoints.down('xs')]:{
+            padding: 0
+        }
+    },
+    linkText:{
+        [theme.breakpoints.down('xs')]:{
+            display: 'none'
         }
     },
     icon: {
@@ -43,25 +63,25 @@ function NavBar() {
             <Paper elevation={0} square={true} className={classes.links}>
                 <a className={classes.link} href="#about">
                     <Face className={classes.icon}/>
-                    <p>About</p>
+                    <p className={classes.linkText}>About</p>
                 </a>
 
                 <a className={classes.link} href="#skills">
                     <Book className={classes.icon}/>
-                    <p>Skills</p>
+                    <p className={classes.linkText}>Skills</p>
                 </a>
 
                 <a className={classes.link} href="#education">
                     <School className={classes.icon}/>
-                    <p>Education</p>
+                    <p className={classes.linkText}>Education</p>
                 </a>
                 <a className={classes.link} href="#projects">
                     <BusinessCenter className={classes.icon}/>
-                    <p> Projects</p>
+                    <p className={classes.linkText}> Projects</p>
                 </a>
                 <a className={classes.link} href="#contact">
                     <Phone className={classes.icon}/>
-                    <p>Contacts</p>
+                    <p className={classes.linkText}>Contacts</p>
                 </a>
             </Paper>
         </div>
