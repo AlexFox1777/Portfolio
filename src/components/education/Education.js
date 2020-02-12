@@ -12,6 +12,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Box from "@material-ui/core/Box";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {Controller, Scene} from "scrollmagic";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import SendIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -39,7 +45,7 @@ const useStyles = makeStyles(theme => ({
     panel: {
         border: '1px solid #cecece'
     },
-    imgContainer:{
+    imgContainer: {
         display: "flex",
         opacity: 0,
         transform: "translateY(50px)",
@@ -57,7 +63,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Education() {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState('panel1');
+    const [expanded, setExpanded] = React.useState('panel2');
 
     const controller = new Controller();
     let image = useRef(null);
@@ -90,41 +96,9 @@ export default function Education() {
                 </Box>
             </Typography>
             <div className={classes.accordion}>
-                {/*panel1*/}
-                <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
-                                className={classes.panel}>
-                    <ExpansionPanelSummary
-                        expandIcon={<ExpandMoreIcon/>}
-                        aria-controls="panel1bh-content"
-                        id="panel1bh-header"
-                    >
-                        <Typography className={classes.heading} color={"secondary"}> Bachelor degree of computer
-                            science</Typography>
-                        <Typography className={classes.secondaryHeading} color={"secondary"}>September 2015 – June
-                            2018</Typography>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                        <Typography color={"secondary"}>
-                            <Typography color={"secondary"} variant={"subtitle1"}>Course Highlights:</Typography>
-                            <Typography color={"secondary"}>
-                                Web Application Development, Java, JavaScript, PHP, Pascal,
-                                Database Programming, Web
-                                Design, Computer Architecture
-                            </Typography>
-                            <Typography color={"secondary"} variant={"subtitle1"}>Intership during
-                                education:</Typography>
-                            <Typography color={"secondary"} variant={"subtitle1"}>Company: Infoplex -
-                                Biysk, Russia.</Typography>
-                            <Typography color={"secondary"} variant={"subtitle1"}>Role:
-                                Was assigned to
-                                the role of frontend developer to redesign website for a local car
-                                service center Inomarcet.
-                            </Typography>
-                        </Typography>
 
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-                {/*panel2*/}
+
+                {/*panel1*/}
                 <ExpansionPanel expanded={expanded === 'panel2'}
                                 onChange={handleChange('panel2')}
                                 className={classes.panel}>
@@ -140,11 +114,131 @@ export default function Education() {
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography color={"secondary"}>
-                            Intership during education: <br/>
-                            Organization: Safe Mothers, Safe Babies Non-profit organization that aims to reduce infant and pregnant mother mortality rates in the villages of rural Uganda. <br/>
-                            Project: Riders for LIfe, Administrative Utility SPA linked to a NodeJS back-end. This project also utilized Frontline SMS messaging service that connected to our Postgres database. <br/>
-                            Role: worked across the stack as a developer though the majority of my time was spent building the administrative facing SPA built using React.
+                            <Typography color={"secondary"}>Course Highlights:
+                                JavaScript, React, Redux,
+                                SQLite, Python,
+                                Django,
+                                Computer Science,
+                                Algorithms
+                            </Typography>
                         </Typography>
+
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                {/*panel2*/}
+                <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
+                                className={classes.panel}>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon/>}
+                        aria-controls="panel1bh-content"
+                        id="panel1bh-header"
+                    >
+                        <Typography className={classes.heading} color={"secondary"}>Altai State University</Typography>
+                        <Typography className={classes.secondaryHeading} color={"secondary"}>September 2015 – June
+                            2018</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Typography color={"secondary"}>
+                            <Typography color={"secondary"} variant={"subtitle1"}>Degree: Bachelor of
+                                Science
+                            </Typography>
+                            <Typography color={"secondary"} variant={"subtitle1"}>Major: Computer Programming
+                            </Typography>
+                            {/*<Typography color={"secondary"} variant={"subtitle1"}></Typography>*/}
+                            <Typography color={"secondary"}>Course Highlights:
+                                Web Application Development, Java, JavaScript, PHP, Pascal,
+                                Database Programming, Web
+                                Design, Computer Architecture
+                            </Typography>
+                        </Typography>
+
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                {/*panel3*/}
+                <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}
+                                className={classes.panel}>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon/>}
+                        aria-controls="panel1bh-content"
+                        id="panel1bh-header"
+                    >
+                        <Link to={"https://www.kiddle.co/"} className={classes.heading} color={"secondary"}>
+                            <Typography className={classes.heading} color={"secondary"} style={{color: '#ce5656'}}>
+                                Summer internship in company
+                            Kiddle</Typography>
+                        </Link>
+                        <Typography className={classes.secondaryHeading} color={"secondary"}>
+                            June 2018 – September 2018
+                        </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Typography color={"secondary"}>
+                            <Typography color={"secondary"} variant={"subtitle1"}>Role: Junior Developer</Typography>
+                            <Typography color={"secondary"} variant={"subtitle1"} style={{paddingTop: 10}}>Accomplishments: </Typography>
+                            <List className={classes.column} dense={true}>
+                                {["Worked on researching safe, child-friendly web-sites",
+                                    "Managed and scaled data in DB ",
+                                    "Improved search results up to 20% "
+                                ].map(description =>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            &#x25CF;
+                                        </ListItemIcon>
+                                        <ListItemText
+                                            primary={
+                                                <Typography color={"secondary"}>
+                                                  {description}
+                                                </Typography>
+                                            }
+                                        />
+                                    </ListItem>
+                                )}
+                            </List>
+                        </Typography>
+
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+
+                {/*panel4*/}
+                <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}
+                                className={classes.panel}>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon/>}
+                        aria-controls="panel1bh-content"
+                        id="panel1bh-header"
+                    >
+                        <Link to={"http://link.2gis.ru/1.2/E48E6156/online/20200201/project20/70000001019926732/null/3ir587G6G6AH4HG3H1HH4sczAga8764975731131uuvmyH1884BG4899953G9cpmv893551I703129A41J4HG7IJGJIG2d7?http://www.inomarket.org"} className={classes.heading} color={"secondary"}>
+                            <Typography className={classes.heading} color={"secondary"} style={{color: '#ce5656'}}>
+                            Internship in company Inomarket
+                            </Typography>
+                        </Link>
+                        <Typography className={classes.secondaryHeading} color={"secondary"}> September 2017 – December 2017</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Typography color={"secondary"}>
+                            <Typography color={"secondary"} variant={"subtitle1"}>Role: Junior Developer</Typography>
+                            <Typography color={"secondary"} variant={"subtitle1"} style={{paddingTop: 10}}>Accomplishments: </Typography>
+                            <List className={classes.column} dense={true}>
+                                {["Collaborated with database developers",
+                                    "Implemented user research",
+                                    "Designed and Optimized UI, leading to increasing conversions up to 15%",
+                                ].map(description =>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            &#x25CF;
+                                        </ListItemIcon>
+                                        <ListItemText
+                                            primary={
+                                                <Typography color={"secondary"}>
+                                                    {description}
+                                                </Typography>
+                                            }
+                                        />
+                                    </ListItem>
+                                )}
+                            </List>
+                        </Typography>
+
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             </div>

@@ -39,8 +39,8 @@ function App() {
             <div className={classes.container}>
                 <About/>
                 <Skills/>
-                <Education/>
                 <Projects/>
+                <Education/>
                 <Contacts/>
                 <Footer/>
 
