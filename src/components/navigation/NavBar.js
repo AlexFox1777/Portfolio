@@ -71,14 +71,16 @@ function NavBar() {
                     <p className={classes.linkText}>Skills</p>
                 </a>
 
-                <a className={classes.link} href="#education">
-                    <School className={classes.icon}/>
-                    <p className={classes.linkText}>Education</p>
-                </a>
                 <a className={classes.link} href="#projects">
                     <BusinessCenter className={classes.icon}/>
                     <p className={classes.linkText}> Projects</p>
                 </a>
+
+                <a className={classes.link} href="#education">
+                    <School className={classes.icon}/>
+                    <p className={classes.linkText}>Education</p>
+                </a>
+
                 <a className={classes.link} href="#contact">
                     <Phone className={classes.icon}/>
                     <p className={classes.linkText}>Contacts</p>

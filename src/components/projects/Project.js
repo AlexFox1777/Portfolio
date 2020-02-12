@@ -4,10 +4,15 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import {Controller, Scene} from "scrollmagic";
+import List from "@material-ui/core/List";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItem from "@material-ui/core/ListItem";
+import SendIcon from '@material-ui/icons/Send';
 
-const useStyles = makeStyle({
-    root: props => ({
-        background: props.bg ? props.bg : "linear-gradient(45deg, #ffff7370 30%, #ff615154 90%)",
+const useStyles = makeStyle(theme => ({
+    root: ({bg}) => ({
+        background: bg ,
         paddingTop: "100px",
         paddingBottom: "100px",
         width: "100%",
@@ -18,6 +23,9 @@ const useStyles = makeStyle({
         transition: 'all 0.6s ease-in-out',
         transform: "translateX(-40px)",
         boxSizing: "border-box",
+        [theme.breakpoints.down('md')]:{
+            top: '15%',
+        }
     },
     picContainer1: {
         position: "relative",
@@ -25,18 +33,21 @@ const useStyles = makeStyle({
         transition: 'all 0.6s ease-in-out',
         transform: "translateX(40px)",
         boxSizing: "border-box",
+        [theme.breakpoints.down('md')]:{
+            top: '15%',
+        }
     },
     pic: props => ({
         position: "absolute",
-        top: props.order ? -150 : -150,
+        top: props.order ? 40 : 40,
         left: props.order ? 30 : 120,
         width: "70%",
-        height: "70%"
+        height: "70%",
     }),
     pic2: props => ({
         position: "absolute",
-        top: props.order ? -40 : -40,
-        left: props.order ? 130 : 90,
+        top: props.order ? 160 : 160,
+        left: props.order ? 130 : 70,
         width: "70%",
         height: "70%"
     }),
@@ -62,6 +73,9 @@ const useStyles = makeStyle({
     title: {
         marginBottom: 30,
     },
+    sub1: {
+        marginTop: 10,
+    },
     img: {
         maxWidth: "400px"
     },
@@ -72,7 +86,9 @@ const useStyles = makeStyle({
         margin: "5% 3% 0 3%",
     },
     gridItem1: props => ({
-        order: props.order ? 1 : 2
+        order: props.order ? 1 : 2,
+        textAlign: 'center',
+
     }),
     gridItem2: props => ({
         order: props.order ? 2 : 1
@@ -81,7 +97,7 @@ const useStyles = makeStyle({
         opacity: 1,
         transform: "translateX(0px)"
     },
-});
+}));
 
 export default function Project(props) {
     const {title, img, img2, text, git, video, website} = props;
@@ -132,9 +148,36 @@ export default function Project(props) {
                 <Grid item sm={12} md={6} className={`${classes.textSection} ${classes.gridItem2}`}>
                     <div className={props.order ? classes.textContainer : classes.textContainer1}
                          ref={el => column2 = el}>
-                        <Typography variant={"h5"} color={"secondary"} className={classes.title}><Box
-                            textAlign="center">{title}</Box></Typography>
-                        <Typography color={"secondary"}> <Box textAlign="center">{text}</Box></Typography>
+                        <Typography variant={"h5"} color={"secondary"} className={classes.title}>
+                            <Box textAlign="center">{title}</Box>
+                        </Typography>
+                        <Typography color={"secondary"}> <Box>{text}</Box></Typography>
+                        {props.stack &&
+                        <Typography color={"secondary"} className={classes.sub1}>
+                            <Box >Tech stack: {props.stack}</Box>
+                        </Typography>
+                        }
+                        {props.accomplishments &&
+                        <>
+                            <Typography color={"secondary"} variant={"subtitle1"} className={classes.sub1}> <Box>Accomplishments: </Box></Typography>
+                            <List className={classes.column} dense={true}>
+                                {props.accomplishments.map(description =>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <SendIcon />
+                                        </ListItemIcon>
+                                        <ListItemText
+                                            primary={
+                                                <Typography color={"secondary"}>
+                                                    {description}
+                                                </Typography>
+                                            }
+                                        />
+                                    </ListItem>
+                                )}
+                            </List>
+                        </>
+                        }
                         <Typography color={"secondary"}>
                             <Box textAlign="center" className={classes.links}>
                                 <a href={git} className={classes.link}> github repo </a>

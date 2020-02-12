@@ -2,13 +2,21 @@ import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Typography from "@material-ui/core/Typography";
 import Project from "./Project";
-import {foodieFunText, foodieFunTitle, safeMotherText, safeMotherTitle} from "../text";
+import {
+    foodieFunAcc, foodieFunStack,
+    foodieFunText,
+    foodieFunTitle,
+    safeMotherAcc,
+    safeMotherStack,
+    safeMotherText,
+    safeMotherTitle
+} from "../text";
 import Box from "@material-ui/core/Box";
 //imgs
 import logo from './resources/login.png'
 import dashboard from './resources/mother-dashboard.png'
-import foodieProfile from './resources/dashboard.png'
-import foodieForm from './resources/form.png'
+import foodieFan from './resources/foodie-fan.png'
+import foodieFan2 from './resources/foodie-fan2.png'
 
 const useStyles = makeStyles(theme => ({
     root: {},
@@ -31,21 +39,24 @@ export default function Projects() {
                     Projects
                 </Box>
             </Typography>
-            <Project title={safeMotherTitle} text={safeMotherText}
+            <Project title={safeMotherTitle} text={safeMotherText} accomplishments={safeMotherAcc}
                      img={logo}
                      img2={dashboard}
+                     stack={safeMotherStack}
                      order={true}
-                     bg={"linear-gradient(45deg, #ffff7370 30%, #ff615154 90%)"}
+
+                     bg={'linear-gradient(45deg, rgba(255, 255, 115, 0.44) 30%, rgba(255, 97, 81, 0.33) 90%)'}
                      git={"https://github.com/Lambda-School-Labs/safe-mothers-fe"}
                      video={"https://www.youtube.com/watch?v=KM4jNYUOg7Y&amp=&feature=youtu.be"}
             />
-            <Project title={foodieFunTitle} text={foodieFunText}
-                     img={foodieForm}
-                     img2={foodieProfile}
+            <Project title={foodieFunTitle} text={foodieFunText} accomplishments={foodieFunAcc}
+                     img={foodieFan2}
+                     img2={foodieFan}
+                     stack={foodieFunStack}
                      order={false}
-                     bg={"linear-gradient(45deg, #a4ff73cf 30%, #23b8ff73 90%)"}
+                     bg={'linear-gradient(45deg, rgba(164, 255, 115, 0.81) 30%, rgba(35, 184, 255, 0.45) 90%)'}
                      git={"https://github.com/Foodie-Fan"}
-                     website={"https://foodie-fan.netlify.com/login"}
+                     website={"https://foodie-fan.netlify.com/"}
 
             />
         </div>
