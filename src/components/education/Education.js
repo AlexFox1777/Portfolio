@@ -107,13 +107,14 @@ export default function Education() {
                         aria-controls="panel2bh-content"
                         id="panel2bh-header"
                     >
-                        <Typography className={classes.heading} color={"secondary"}>Lamda school, Full Stack Web
-                            course</Typography>
-                        <Typography className={classes.secondaryHeading} color={"secondary"}>May 2019 – February
-                            2020</Typography>
+                        <Typography className={classes.heading} color={"secondary"}>Lamda school</Typography>
+                        <Typography className={classes.secondaryHeading} color={"secondary"}>May 2019 – Feb. 2020</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography color={"secondary"}>
+                            <Typography className={classes.heading} color={"secondary"}>
+                                Full Stack Web Development, Software Engineer
+                            </Typography>
                             <Typography color={"secondary"}>Course Highlights:
                                 JavaScript, React, Redux,
                                 SQLite, Python,
@@ -134,17 +135,13 @@ export default function Education() {
                         id="panel1bh-header"
                     >
                         <Typography className={classes.heading} color={"secondary"}>Altai State University</Typography>
-                        <Typography className={classes.secondaryHeading} color={"secondary"}>September 2015 – June
-                            2018</Typography>
+                        <Typography className={classes.secondaryHeading} color={"secondary"}>Sep. 2015 – Jun. 2018</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography color={"secondary"}>
-                            <Typography color={"secondary"} variant={"subtitle1"}>Degree: Bachelor of
-                                Science
+                            <Typography color={"secondary"} variant={"subtitle1"}>
+                                Bachelor of Science - BS, Information Technology
                             </Typography>
-                            <Typography color={"secondary"} variant={"subtitle1"}>Major: Computer Programming
-                            </Typography>
-                            {/*<Typography color={"secondary"} variant={"subtitle1"}></Typography>*/}
                             <Typography color={"secondary"}>Course Highlights:
                                 Web Application Development, Java, JavaScript, PHP, Pascal,
                                 Database Programming, Web
@@ -164,11 +161,10 @@ export default function Education() {
                     >
                         <Link to={"https://www.kiddle.co/"} className={classes.heading} color={"secondary"}>
                             <Typography className={classes.heading} color={"secondary"} style={{color: '#ce5656'}}>
-                                Summer internship in company
-                            Kiddle</Typography>
+                                Summer internship in company Kiddle</Typography>
                         </Link>
                         <Typography className={classes.secondaryHeading} color={"secondary"}>
-                            June 2018 – September 2018
+                            Jun. 2018 – Sep. 2018
                         </Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
@@ -212,7 +208,7 @@ export default function Education() {
                             Internship in company Inomarket
                             </Typography>
                         </Link>
-                        <Typography className={classes.secondaryHeading} color={"secondary"}> September 2017 – December 2017</Typography>
+                        <Typography className={classes.secondaryHeading} color={"secondary"}> Sep. 2017 – Dec. 2017</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography color={"secondary"}>
