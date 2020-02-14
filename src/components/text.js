@@ -25,7 +25,7 @@ export const about = "Highly motivated full stack web developer with previous ha
 /*SAFE MOTHERS*/
 export const safeMotherTitle = "Riders For Life";
 export const safeMotherText = "Riders For Life is a part of non profit organization “Safe Mothers Safe Babies”." +
-    " It allows mother in Uganda to request transportation to facilities quickly and safely." +
+    " It allows mothers in Uganda to request transportation to facilities quickly and safely." +
     " Furthermore it has an administrative dashboard that allows to interact with mother/driver data collected in Uganda.";
 export const safeMotherStack = "Built using React, ODK, Grommet, Redux, Node.js, PostgreSQL, Frontline SMS"
 export const safeMotherAcc = [
