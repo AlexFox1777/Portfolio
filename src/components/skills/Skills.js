@@ -16,13 +16,14 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import SkillCard from "./SkillCard";
+import Box from "@material-ui/core/Box";
 
 
-const useStyles = makeStyles(theme =>({
+const useStyles = makeStyles(theme => ({
     background: {
         background: 'linear-gradient(45deg, #fa96ab 30%, #ffccb2 90%)',
         backgroundRepeat: "no-repeat",
-        backgroundSize: "100% 250px",
+        backgroundSize: "100% 350px",
         width: "100%",
         [theme.breakpoints.down('xs')]: {
             background: 'white',
@@ -39,11 +40,11 @@ const useStyles = makeStyles(theme =>({
         maxWidth: '1500px'
     },
     title: {
-        padding: "40px 0 50px 5%",
+        padding: "90px 0 130px 2%",
+        boxSizing: "border-box",
         [theme.breakpoints.down('xs')]: {
             fontSize: "24px",
             fontWeight: "bold",
-            textAlign: "center"
         },
     },
     visible: {
@@ -72,32 +73,39 @@ export default function Skills() {
         , []);
 
     return (
-        <div className={classes.background} id="skills">
-            <Typography color={"secondary"} variant={"h4"} className={classes.title}>My Skills</Typography>
-            <div className={classes.cardContainer}>
-                <Grid container spacing={1} className={classes.cards} justify={"center"}
-                      ref={el => cardItem = el} >
-                    <Grid item xs={8} sm={4} md={3} lg={2}>
-                        <SkillCard img={JS} title={"JavaScript"} num1={"100%"} num2={"100%"} num3={"100%"}/>
+        <>
+            <div className={classes.background} id="skills">
+                <Typography variant={"h4"} color={"secondary"} className={classes.title}>
+                    <Box textAlign={"center"}>
+                        Skills
+                    </Box>
+                </Typography>
+                <div className={classes.cardContainer}>
+                    <Grid container spacing={1} className={classes.cards} justify={"center"}
+                          ref={el => cardItem = el}>
+                        <Grid item xs={8} sm={4} md={3} lg={2}>
+                            <SkillCard img={JS} title={"JavaScript"} num1={"100%"} num2={"100%"} num3={"100%"}/>
+                        </Grid>
+                        <Grid item xs={8} sm={4} md={3} lg={2}>
+                            <SkillCard img={REACT} title={"React"} num1={"100%"} num2={"100%"} num3={"100%"}/>
+                        </Grid>
+                        <Grid item xs={8} sm={4} md={3} lg={2}>
+                            <SkillCard img={REDUX} title={"Redux"} num1={"100%"} num2={"100%"} num3={"100%"}/>
+                        </Grid>
+                        <Grid item xs={8} sm={4} md={3} lg={2}>
+                            <SkillCard img={NODE} title={"Node.js"} num1={"100%"} num2={"100%"} num3={"100%"}/>
+                        </Grid>
+                        <Grid item xs={8} sm={4} md={3} lg={2}>
+                            <SkillCard img={SQL} title={"MySql"} num1={"100%"} num2={"100%"} num3={"100%"}/>
+                        </Grid>
+                        <Grid item xs={8} sm={4} md={3} lg={2}>
+                            <SkillCard img={PYTHON} title={"Python"} num1={"100%"} num2={"100%"} num3={"100%"}/>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={8} sm={4} md={3} lg={2}>
-                        <SkillCard img={REACT} title={"React"} num1={"100%"} num2={"100%"} num3={"100%"}/>
-                    </Grid>
-                    <Grid item xs={8} sm={4} md={3} lg={2}>
-                        <SkillCard img={REDUX} title={"Redux"} num1={"100%"} num2={"100%"} num3={"100%"}/>
-                    </Grid>
-                    <Grid item xs={8} sm={4} md={3} lg={2}>
-                        <SkillCard img={NODE} title={"Node.js"} num1={"100%"} num2={"100%"} num3={"100%"}/>
-                    </Grid>
-                    <Grid item xs={8} sm={4} md={3} lg={2}>
-                        <SkillCard img={SQL} title={"MySql"} num1={"100%"} num2={"100%"} num3={"100%"}/>
-                    </Grid>
-                    <Grid item xs={8} sm={4} md={3} lg={2}>
-                        <SkillCard img={PYTHON} title={"Python"} num1={"100%"} num2={"100%"} num3={"100%"}/>
-                    </Grid>
-                </Grid>
+                </div>
+                {/*<OtherSkills/>*/}
             </div>
-        </div>
+        </>
     )
 }
 
