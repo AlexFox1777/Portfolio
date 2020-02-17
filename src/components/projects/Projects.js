@@ -19,7 +19,9 @@ import foodieFan from './resources/foodie-fan.png'
 import foodieFan2 from './resources/foodie-fan2.png'
 
 const useStyles = makeStyles(theme => ({
-    root: {},
+    root: {
+
+    },
     title: {
         padding: "90px 0 90px 2%",
         boxSizing: "border-box",
