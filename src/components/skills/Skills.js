@@ -6,6 +6,7 @@ import REDUX from './resources/redux.svg';
 import SQL from './resources/sql.svg';
 import NODE from "./resources/node.svg";
 import PYTHON from "./resources/python.svg";
+import VUE from './resources/vue.svg'
 //animation
 import {TweenMax, Power3} from 'gsap';
 import {Controller, Scene} from "scrollmagic";
@@ -91,6 +92,9 @@ export default function Skills() {
                         </Grid>
                         <Grid item xs={8} sm={4} md={3} lg={2}>
                             <SkillCard img={REDUX} title={"Redux"} num1={"100%"} num2={"100%"} num3={"100%"}/>
+                        </Grid>
+                        <Grid item xs={8} sm={4} md={3} lg={2}>
+                            <SkillCard img={VUE} title={"Vue"} num1={"100%"} num2={"100%"} num3={"100%"}/>
                         </Grid>
                         <Grid item xs={8} sm={4} md={3} lg={2}>
                             <SkillCard img={NODE} title={"Node.js"} num1={"100%"} num2={"100%"} num3={"100%"}/>

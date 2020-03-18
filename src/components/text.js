@@ -48,7 +48,7 @@ export const foodieFunAcc = [
 /*Black cat sticker*/
 export const blackcatTitle = 'Black Cat Sticker';
 export const blackcatText = 'The Black Cat Sticker is a funny small application that allows users to upload their images and attach a black-cat sticker. During use, the user will be offered various filters to change the size, rotation and opacity of the sticker. It is also possible to attach a label with the appropriate configuration of changing the font and color of the label.'
-export const blackcatStack = 'Built using Vue.js, Nuxt, Cropper.js, SASS'
+export const blackcatStack = 'Built using Vue.js, Vuex, Nuxt, Cropper.js, SASS'
 export const blackcatAcc = [
     "Built from scratch utilizing Nuxt framework",
     "Designed and programmed the functionality for manipulating the image editing, and attaching additional attributes",
