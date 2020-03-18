@@ -3,6 +3,9 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 import Typography from "@material-ui/core/Typography";
 import Project from "./Project";
 import {
+    blackcatAcc, blackcatStack,
+    blackcatText,
+    blackcatTitle,
     foodieFunAcc, foodieFunStack,
     foodieFunText,
     foodieFunTitle,
@@ -17,6 +20,8 @@ import logo from './resources/login.png'
 import dashboard from './resources/mother-dashboard.png'
 import foodieFan from './resources/foodie-fan.png'
 import foodieFan2 from './resources/foodie-fan2.png'
+import blackcat1 from './resources/blackcat1.PNG'
+import blackcat2 from './resources/blackcat2.PNG'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -60,6 +65,16 @@ export default function Projects() {
                      git={"https://github.com/Foodie-Fan"}
                      website={"https://foodie-fan.netlify.com/"}
 
+            />
+            <Project title={blackcatTitle} text={blackcatText} accomplishments={blackcatAcc}
+                     img={blackcat2}
+                     img2={blackcat1}
+                     stack={blackcatStack}
+                     order={true}
+
+                     bg={'linear-gradient(45deg, rgba(255, 255, 115, 0.44) 30%, rgba(255, 97, 81, 0.33) 90%)'}
+                     git={"https://github.com/AlexFox1777/BlackCat-Sticker"}
+                     website={"https://blackcat-sticker.herokuapp.com/"}
             />
         </div>
     )
