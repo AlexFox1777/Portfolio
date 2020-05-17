@@ -63,7 +63,7 @@ export default function Contacts() {
                     </a>
                     <a href={"https://www.linkedin.com/in/aleksandra-foksman-551490192"}>
                         <img src={LinkedIn} width={50} className={classes.img}/></a>
-                    <a href={"https://twitter.com/foksman"}>
+                    <a href={"https://twitter.com/SashaFoksman"}>
                         <img src={Tweeter} width={50} className={classes.img}/>
                     </a>
                 </div>
