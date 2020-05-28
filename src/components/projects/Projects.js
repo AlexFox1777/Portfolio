@@ -12,7 +12,11 @@ import {
     safeMotherAcc,
     safeMotherStack,
     safeMotherText,
-    safeMotherTitle
+    safeMotherTitle,
+    spiderTitle,
+    spiderText,
+    spiderAcc,
+    spiderStack
 } from "../text";
 import Box from "@material-ui/core/Box";
 //imgs
@@ -22,6 +26,8 @@ import foodieFan from './resources/foodie-fan.png'
 import foodieFan2 from './resources/foodie-fan2.png'
 import blackcat1 from './resources/blackcat1.PNG'
 import blackcat2 from './resources/blackcat2.PNG'
+import spider1 from './resources/spider1.PNG'
+import spider2 from './resources/spider2.PNG'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -75,6 +81,16 @@ export default function Projects() {
                      bg={'linear-gradient(45deg, rgba(255, 255, 115, 0.44) 30%, rgba(255, 97, 81, 0.33) 90%)'}
                      git={"https://github.com/AlexFox1777/BlackCat-Sticker"}
                      website={"https://blackcat-sticker.herokuapp.com/"}
+            />
+             <Project title={spiderTitle} text={spiderText} accomplishments={spiderAcc}
+                     img={spider1}
+                     img2={spider2}
+                     stack={spiderStack}
+                     order={false}
+
+                     bg={'linear-gradient(45deg, rgba(255, 255, 115, 0.44) 30%, rgba(255, 97, 81, 0.33) 90%)'}
+                     git={"https://github.com/SpiderGraph/FE"}
+                     website={"https://spidergraph.netlify.app"}
             />
         </div>
     )
