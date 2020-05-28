@@ -54,3 +54,12 @@ export const blackcatAcc = [
     "Designed and programmed the functionality for manipulating the image editing, and attaching additional attributes",
     "Implemented svg animation with pure css"
 ]
+
+export const spiderTitle = 'Spider Graph'
+export const spiderText = 'Spider Graph is a visualizer for business goals, initiatives, timelines, and progress. It allows users to express all the ideas they have and organize them by priority and steps.'
+export const spiderStack = 'Built using React, Redux, TypeScript, Node, Express, Mongoose'
+export const spiderAcc = [
+    "Performed calculations and built the graph utilizing pure svg",
+    "Built a REST API with Express and Mongoose",
+    "Designed and programmed components with TypeScript type checking"
+]
